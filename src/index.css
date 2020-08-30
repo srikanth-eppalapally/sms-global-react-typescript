@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+#root, .container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header{
+  width: 100%;
+  background: #111111;
+  min-height: 70px;
+}
+
+
+
+.header,
+.footer {
+  flex: 1 100%;
+}
+.sidebar {
+  height: 100vh;
+  text-align: center;
+  min-width: 300px;
+  background: #eeeeee;
+}
+
+.links, ul{
+  list-style: none;
+  list-style: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.links li{
+  margin: 10px 0;
+  padding: 2em;
+}
+.links li a.link{
+ color: #111111;
+text-decoration: none;
+  padding: 10px 5px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.links li:hover{
+  background: #212529;
+  color: #fff;
+}
+
+.links li:hover a{
+  color: #fff;
+}
+
+
+.main {
+  flex: 2;
+  padding: 2em;
+}
+
+h1{
+  margin-bottom: 15px;
+  font-size: 36px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.api-key-container, .sms-container{
+  width: 52%;
+  margin: 0 auto;
+}
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+input, textarea, select {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  textarea{
+    min-height: 60px;
+  }
+
+
+button {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  button:hover {
+    color: #fff;
+    background-color: #23272b;
+    border-color: #1d2124;
+  }
+  
+  button:focus {
+    color: #fff;
+    background-color: #23272b;
+    border-color: #1d2124;
+  }
+  
+  button:disabled {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+    opacity: 0.6;
+  }
+  
+  button:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: #1d2124;
+    border-color: #171a1d;
+  }
+  
+
+  .form-group.has-error{
+    color: red;
+  }
+
+  .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+  }
+
+  .card p{
+    margin-bottom: 0;
+  }
+
+  .card ul{
+    list-style: none;
+     float: left;
+  }
+
+  .card ul li{
+    float: left;
+    margin: 10px;
+  }
