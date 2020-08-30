@@ -35,7 +35,7 @@ export class SmsGlobalApi {
     }
 
     onGetSmsReport(): Promise<AxiosResponse<SmsReportState>>{
-        const authorizationHeader = this.getAuthorizationHeader('/v2/sms/', 'POST')
+        const authorizationHeader = this.getAuthorizationHeader('/v2/sms/', 'GET')
         const sendSmsUrl = this.baseUrl + '/v2/sms/?limit=5';
         const headers =  {
             Accept: 'application/json',
