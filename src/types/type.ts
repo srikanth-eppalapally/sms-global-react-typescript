@@ -9,6 +9,8 @@ export enum SmsGlobalActionTypes {
     ON_SEND_SMS = 'ON_SEND_SMS',
     ON_SMS_FORM_CHANGE = 'ON_SMS_FORM_CHANGE',
     ON_GET_SMS_REPORT = 'ON_GET_SMS_REPORT',
-    
-    
+    ON_TOAST_SHOW = 'ON_TOAST_SHOW',
+    ON_TOAST_DELETE = 'ON_TOAST_DELETE'
+
+
 }

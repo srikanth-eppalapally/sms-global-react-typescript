@@ -1,5 +1,8 @@
+import { IMessage } from "./SmsReportState";
+
 export interface SendSmsState {
-    sendSmsForm: ISendSmsForm
+    sendSmsForm: ISendSmsForm,
+    messages: IMessage[]
 }
 
 

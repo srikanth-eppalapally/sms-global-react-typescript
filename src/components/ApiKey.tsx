@@ -9,7 +9,7 @@ interface Props {
 }
 export const ApiKey: React.FC<Props> = ({ apiKeys }) => {
     return (
-        <div className="card">
+        <div className="card w-100">
             <ul>
             {
                 Object.keys(apiKeys).map((report, i) => 

@@ -5,5 +5,5 @@ import { SmsReportState } from "./SmsReportState";
 export default interface AppState {
     addAPIState: AddAPIState;
     sendSmsState: SendSmsState,
-    smsReportState: SmsReportState
+    smsReportState: SmsReportState,
 }

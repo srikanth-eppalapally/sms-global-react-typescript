@@ -35,6 +35,7 @@ export const resetForm = (addApiKeyForm: IAPIKeyForm, dispatch: Dispatch) => {
 export const addAPIKeys = () => {
     return (dispatch: Dispatch, getState: any) => {
         let { apiKeys, addApiKeyForm } = getState().addAPIState;
+  
         const { apiKey, secretKey, displayName, valid } = addApiKeyForm;
         if (valid) {
             apiKeys = {

@@ -4,18 +4,13 @@ import { SmsReportState } from '../states/SmsReportState';
 import { SmsReportAction } from '../actions/SmsReportAction';
 
 
-const initialState:SmsReportState  =  {
-   
-    messageReport:{
+const initialState: SmsReportState = {
+    messageReport: {
         total: 0,
-        sent: 0,
-        delivered: 0,
-        failed: 0
-    },
-    messagesList: []
-
-    
-
+        limit: 0,
+        offset: 0,
+        messages: []
+    }
 };
 const SmsReportReducer: Reducer<SmsReportState, SmsReportAction> =
     (state: SmsReportState = initialState, action: SmsReportAction) => {
@@ -24,7 +19,6 @@ const SmsReportReducer: Reducer<SmsReportState, SmsReportAction> =
             case SmsGlobalActionTypes.ON_GET_SMS_REPORT: {
                 return {
                     ...state,
-                    messagesList: action.messagesList,
                     messageReport: action.messageReport,
                 }
 

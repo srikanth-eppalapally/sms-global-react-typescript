@@ -6,7 +6,6 @@ import { AddAPIKeys } from './components/AddAPIKeys';
 import { SendSms } from './components/SendSms';
 import { SmsReport } from './components/SmsReport';
 
-
 const store = configureStore();
 export class App extends React.Component {
     render() {
@@ -14,8 +13,6 @@ export class App extends React.Component {
             <div className="container">
                 <Provider store={store}>
                     <header className="header"></header>
-
-
                     <Router >
                         <aside className="sidebar">
                             <h1>Welcome</h1>

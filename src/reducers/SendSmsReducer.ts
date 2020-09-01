@@ -16,7 +16,8 @@ const initialState: SendSmsState = {
         },
         valid: false,
         submit: false
-    }
+    },
+    messages: []
 };
 const SendSmsReducer: Reducer<SendSmsState, SendSmsAction> =
     (state: SendSmsState = initialState, action: SendSmsAction) => {
@@ -28,6 +29,12 @@ const SendSmsReducer: Reducer<SendSmsState, SendSmsAction> =
                     sendSmsForm: action.sendSmsForm,
                 }
 
+            }
+            case SmsGlobalActionTypes.ON_SEND_SMS: {
+                return {
+                    ...state,
+                    messages: action.messages,
+                }
             }
             default: return state;
         }

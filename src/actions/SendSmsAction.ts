@@ -2,11 +2,12 @@ import { Dispatch } from 'redux';
 import { SmsGlobalActionTypes } from '../types/type';
 import { ISendSmsForm } from '../states/SendSmsState';
 import { SmsGlobalApi } from '../api/smsGlobalApi';
+import { IMessage } from '../states/SmsReportState';
 
 
 export interface SendSmsAction {
     type: SmsGlobalActionTypes.ON_SEND_SMS | SmsGlobalActionTypes.ON_SMS_FORM_CHANGE;
-    response: any;
+    messages: IMessage[];
     sendSmsForm: ISendSmsForm
 }
 
@@ -15,7 +16,7 @@ export interface SendSmsAction {
 export const onSuccessSmsSend = (response: any): SendSmsAction => {
     return {
         type: SmsGlobalActionTypes.ON_SEND_SMS,
-        response: response
+        messages: [...response.messages]
     } as SendSmsAction;
 }
 
@@ -32,14 +33,14 @@ export const onSendingSms = () => {
         const { sendSmsForm } = getState().sendSmsState;
         const { from, to, message } = sendSmsForm;
         const req = {
-            destintion: to,
+            destination: to,
             message: message,
             origin: from
         }
         console.log(req);
         return new SmsGlobalApi().onSendSms(req)
-            .then((response) => 
-                dispatch(onSuccessSmsSend(response)));
+            .then((response) =>
+                dispatch(onSuccessSmsSend(response.data)));
     };
 }
 

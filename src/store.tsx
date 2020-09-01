@@ -11,7 +11,7 @@ import SmsReportReducer from './reducers/SmsReportReducer';
 const rootReducer = combineReducers<AppState>({
     addAPIState: AddAPIKeysReducer,
     sendSmsState: SendSmsReducer,
-    smsReportState: SmsReportReducer
+    smsReportState: SmsReportReducer,
 });
 
 export default function configureStore(): Store<AppState, AnyAction> {

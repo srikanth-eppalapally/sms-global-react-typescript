@@ -1,21 +1,21 @@
 export interface SmsReportState {
     messageReport: IsmsReport,
-    messagesList: IMessage[]
 }
 
 export interface IsmsReport{
-    [key: string]: number;
     total: number,
-    sent: number,
-    delivered: number,
-    failed: number
+    offset: number,
+    limit: number,
+    messages: IMessage[]
 }
 
 export interface IMessage {
-    timeSent: string;
-    from: string;
-    to: string;
+    [key:string] : string | number;
+    id: number;
+    outgoing_id: number;
+    origin: string;
+    destination: string;
+    message: string;
     status: string;
-    messageContent: ''
-
+    dateTime: string;
 }

@@ -8,6 +8,7 @@ interface Props {
     onChange: React.EventHandler<HtmlEvent>;
     label: string;
     value: number;
+    placeholder: string;
     options: Array<Option>;
 }
 
@@ -16,13 +17,13 @@ interface Option {
     label: string;
 }
 
-const Select: React.FC<Props> = ({ name, label, options, onChange, value }) => {
- //   console.log(options);
+const Select: React.FC<Props> = ({ name, label, options, onChange, value, placeholder }) => {
+    //   console.log(options);
     return (
         <div className="form-group">
             <label htmlFor={name}>{label}</label>
-            <select name={name} id={name} value={value} onChange={(e) => onChange(e)} className="form-control">
-                <option value="" />
+            <select placeholder={placeholder} name={name} id={name} value={value} onChange={(e) => onChange(e)} className="form-control">
+                <option value="">{placeholder}</option>
                 {options.map(option => (
                     <option key={option.value} value={option.value}>
                         {option.label}
